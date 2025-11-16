@@ -1,65 +1,132 @@
-import Image from "next/image";
+import NavBar from "./components/NavBar";
+import Hero from "./components/Hero";
+import Card from "./components/Card";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      <NavBar />
+      
+      {/* Hero Section */}
+      <Hero 
+        title="Ley Explico"
+        subtitle="Reinas y príncipes, bienvenidos a la revista digital que explica las leyes del Congreso de Colombia de manera clara y visual."
+        size="large"
+      />
+
+      {/* Introduction */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-serif text-subtitle font-bold mb-8">
+            El Congreso explicado para todos
+          </h2>
+          <p className="text-body text-[--gray-medium] leading-relaxed max-w-3xl mx-auto">
+            Un proyecto de grado dedicado a transformar la información legislativa en historias 
+            comprensibles y visuales. Descubre las leyes aprobadas, los proyectos en curso y 
+            conoce a quienes hacen posible este espacio.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+      </section>
+
+      {/* Main Cards Grid */}
+      <section className="py-16 px-6 bg-[--gray-light]">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card
+              title="Leyes Coronadas"
+              description="Descubre las leyes que ya fueron aprobadas por el Congreso de Colombia. Historias de cambio que impactan nuestra sociedad."
+              link="/leyes-coronadas"
+              tag="Aprobadas"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Card
+              title="Proyectos Saltando"
+              description="Conoce los proyectos de ley que están avanzando en el Congreso. El futuro de nuestra legislación se escribe hoy."
+              link="/proyectos-saltando"
+              tag="En progreso"
+            />
+            <Card
+              title="Entre al Reinado"
+              description="Conoce el equipo detrás de este proyecto y síguenos en nuestras redes sociales para más contenido sobre el Congreso."
+              link="/entre-al-reinado"
+              tag="Equipo"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Content */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="font-serif text-subtitle font-bold mb-12 text-center">
+            Últimas leyes aprobadas
+          </h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <article className="group">
+              <div className="mb-6 overflow-hidden">
+                <div className="aspect-video bg-linear-to-br from-[--accent]/20 to-[--accent]/5 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                  <span className="text-6xl">💑</span>
+                </div>
+              </div>
+              <h3 className="font-serif text-2xl font-bold mb-4 group-hover:text-[--accent] transition-colors">
+                Hasta que la vida nos separe
+              </h3>
+              <p className="text-[--gray-medium] mb-4 leading-relaxed">
+                Después de nueve intentos, ya no es necesario inventar una telenovela de drama para poder divorciarse. 
+                El Congreso aprobó una ley para separarse sin buscar excusas.
+              </p>
+              <a href="/leyes-coronadas" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[--foreground] hover:text-[--accent] transition-colors">
+                Leer más
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+
+            <article className="group">
+              <div className="mb-6 overflow-hidden">
+                <div className="aspect-video bg-linear-to-br from-[--accent]/20 to-[--accent]/5 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+                  <span className="text-6xl">👶</span>
+                </div>
+              </div>
+              <h3 className="font-serif text-2xl font-bold mb-4 group-hover:text-[--accent] transition-colors">
+                Son niñas, no esposas
+              </h3>
+              <p className="text-[--gray-medium] mb-4 leading-relaxed">
+                Después de 17 años de intentos, el Congreso por fin prohibió el matrimonio infantil en Colombia. 
+                Un paso histórico para proteger a nuestros niños y niñas.
+              </p>
+              <a href="/leyes-coronadas" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[--foreground] hover:text-[--accent] transition-colors">
+                Leer más
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 px-6 bg-[--foreground] text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="font-serif text-subtitle font-bold mb-6">
+            Mantente informado
+          </h2>
+          <p className="text-xl text-white/80 mb-8 leading-relaxed">
+            Las leyes nos afectan a todos. Conoce lo que está pasando en el Congreso 
+            de una manera clara, visual y sin complicaciones.
+          </p>
+          <a 
+            href="/leyes-coronadas" 
+            className="inline-block px-8 py-4 bg-[--accent] text-[--foreground] font-semibold uppercase tracking-wider hover:bg-[--accent]/90 transition-colors"
           >
-            Documentation
+            Explorar leyes
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <Footer />
+    </>
   );
 }
