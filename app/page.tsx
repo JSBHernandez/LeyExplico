@@ -2,6 +2,7 @@ import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -18,6 +19,15 @@ export default function Home() {
       {/* Introduction */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
+            <Image 
+              src="/materials/LEY EXPLICO 2.png" 
+              alt="Ley Explico Logo" 
+              width={200} 
+              height={200}
+              className="object-contain"
+            />
+          </div>
           <h2 className="font-serif text-subtitle font-bold mb-8">
             El Congreso explicado para todos
           </h2>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,7 +7,16 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
-            <h3 className="font-serif text-2xl font-bold mb-4 text-white">Ley Explico</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Image 
+                src="/materials/SAPO 2.png" 
+                alt="Sapo Logo" 
+                width={40} 
+                height={40}
+                className="object-contain"
+              />
+              <h3 className="font-serif text-2xl font-bold text-white">Ley Explico</h3>
+            </div>
             <p className="text-gray-300 leading-relaxed">
               Un proyecto de grado dedicado a explicar las leyes y proyectos del Congreso de Colombia de manera accesible y visual.
             </p>

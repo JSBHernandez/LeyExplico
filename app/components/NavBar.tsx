@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -11,8 +12,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="font-serif text-2xl font-bold tracking-tight hover:text-[--accent] transition-colors">
-            Ley Explico
+          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Image 
+              src="/materials/SAPO 2.png" 
+              alt="Ley Explico Logo" 
+              width={50} 
+              height={50}
+              className="object-contain"
+            />
+            <span className="font-serif text-2xl font-bold tracking-tight">Ley Explico</span>
           </Link>
 
           {/* Desktop Menu */}
