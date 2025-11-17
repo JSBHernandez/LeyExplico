@@ -1,138 +1,161 @@
-import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
-import Card from "./components/Card";
+import Link from "next/link";
 import Footer from "./components/Footer";
 import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <NavBar />
-      
-      {/* Hero Section */}
-      <Hero 
-        title="Ley Explico"
-        subtitle="Reinas y príncipes, bienvenidos a la revista digital que explica las leyes del Congreso de Colombia de manera clara y visual."
-        size="large"
-      />
-
-      {/* Introduction */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center mb-8">
-            <Image 
-              src="/materials/LEY EXPLICO 2.png" 
-              alt="Ley Explico Logo" 
-              width={200} 
-              height={200}
-              className="object-contain"
-            />
+      {/* Hero Section with Purple Background */}
+      <section className="min-h-screen bg-[#390050] relative flex items-center justify-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
+          {/* Main Logo and Title */}
+          <div className="mb-16 animate-fade-in">
+            <div className="flex justify-center mb-8">
+              <Image 
+                src="/materials/SAPO 2.png" 
+                alt="Sapo Logo" 
+                width={120} 
+                height={120}
+                className="object-contain drop-shadow-2xl animate-bounce-slow"
+                priority
+              />
+            </div>
+            <h1 className="font-serif text-[clamp(3rem,12vw,8rem)] font-bold text-white mb-6 tracking-tight leading-none drop-shadow-lg">
+              LEY EXPLICO
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light tracking-wide">
+              Reinas y príncipes, bienvenidos a la revista digital que explica las leyes del Congreso de Colombia
+            </p>
           </div>
-          <h2 className="font-serif text-subtitle font-bold mb-8">
-            El Congreso explicado para todos
-          </h2>
-          <p className="text-body text-[--gray-medium] leading-relaxed max-w-3xl mx-auto">
-            Un proyecto de grado dedicado a transformar la información legislativa en historias 
-            comprensibles y visuales. Descubre las leyes aprobadas, los proyectos en curso y 
-            conoce a quienes hacen posible este espacio.
-          </p>
+
+          {/* Three Main Sections */}
+          <div className="grid md:grid-cols-3 gap-8 mt-20 max-w-6xl mx-auto">
+            {/* Leyes Coronadas */}
+            <Link href="/leyes-coronadas" className="group">
+              <div className="bg-white/10 border-2 border-white/30 rounded-lg p-8 hover:bg-white/20 hover:border-[#00ff88] hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-4 tracking-wide">
+                  LEYES CORONADAS
+                </h2>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                  Descubre las leyes aprobadas que están transformando Colombia
+                </p>
+                <div className="mt-6 flex justify-center items-center gap-2 text-[#00ff88] font-semibold uppercase text-sm tracking-wider">
+                  Explorar
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+            {/* Proyectos Saltando */}
+            <Link href="/proyectos-saltando" className="group">
+              <div className="bg-white/10 border-2 border-white/30 rounded-lg p-8 hover:bg-white/20 hover:border-[#00ff88] hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-4 tracking-wide">
+                  PROYECTOS SALTANDO
+                </h2>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                  Conoce los proyectos de ley en proceso que marcarán el futuro
+                </p>
+                <div className="mt-6 flex justify-center items-center gap-2 text-[#00ff88] font-semibold uppercase text-sm tracking-wider">
+                  Explorar
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+            {/* Entre al Reinado */}
+            <Link href="/entre-al-reinado" className="group">
+              <div className="bg-white/10 border-2 border-white/30 rounded-lg p-8 hover:bg-white/20 hover:border-[#00ff88] hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                <h2 className="font-serif text-2xl md:text-3xl font-bold text-white mb-4 tracking-wide">
+                  ENTRE AL REINADO
+                </h2>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                  Conoce al equipo y únete a nuestra comunidad informada
+                </p>
+                <div className="mt-6 flex justify-center items-center gap-2 text-[#00ff88] font-semibold uppercase text-sm tracking-wider">
+                  Explorar
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Subtitle at bottom */}
+          <div className="mt-20 pt-12 border-t border-white/20">
+            <p className="text-white/70 text-sm md:text-base tracking-widest uppercase font-light">
+              Un proyecto de grado dedicado a hacer las leyes accesibles para todos
+            </p>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <svg className="w-6 h-6 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </section>
 
-      {/* Main Cards Grid */}
-      <section className="py-16 px-6 bg-[--gray-light]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card
-              title="Leyes Coronadas"
-              description="Descubre las leyes que ya fueron aprobadas por el Congreso de Colombia. Historias de cambio que impactan nuestra sociedad."
-              link="/leyes-coronadas"
-              tag="Aprobadas"
-            />
-            <Card
-              title="Proyectos Saltando"
-              description="Conoce los proyectos de ley que están avanzando en el Congreso. El futuro de nuestra legislación se escribe hoy."
-              link="/proyectos-saltando"
-              tag="En progreso"
-            />
-            <Card
-              title="Entre al Reinado"
-              description="Conoce el equipo detrás de este proyecto y síguenos en nuestras redes sociales para más contenido sobre el Congreso."
-              link="/entre-al-reinado"
-              tag="Equipo"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Content */}
+      {/* Featured Content Section */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-subtitle font-bold mb-12 text-center">
-            Últimas leyes aprobadas
+          <h2 className="font-serif text-subtitle font-bold mb-4 text-center text-[#390050]">
+            Últimas Leyes Aprobadas
           </h2>
+          <p className="text-center text-[--gray-medium] mb-12 max-w-2xl mx-auto">
+            Mantente informado sobre las leyes más recientes que están cambiando el país
+          </p>
+          
           <div className="grid md:grid-cols-2 gap-12">
-            <article className="group">
-              <div className="mb-6 overflow-hidden">
-                <div className="aspect-video bg-linear-to-br from-[--accent]/20 to-[--accent]/5 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+            <Link href="/leyes-coronadas" className="group">
+              <article className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="aspect-video bg-linear-to-br from-[#390050]/20 to-[#00ff88]/10 flex items-center justify-center">
                   <span className="text-6xl">💑</span>
                 </div>
-              </div>
-              <h3 className="font-serif text-2xl font-bold mb-4 group-hover:text-[--accent] transition-colors">
-                Hasta que la vida nos separe
-              </h3>
-              <p className="text-[--gray-medium] mb-4 leading-relaxed">
-                Después de nueve intentos, ya no es necesario inventar una telenovela de drama para poder divorciarse. 
-                El Congreso aprobó una ley para separarse sin buscar excusas.
-              </p>
-              <a href="/leyes-coronadas" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[--foreground] hover:text-[--accent] transition-colors">
-                Leer más
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </article>
+                <div className="p-6">
+                  <h3 className="font-serif text-2xl font-bold mb-3 group-hover:text-[#390050] transition-colors">
+                    Hasta que la vida nos separe
+                  </h3>
+                  <p className="text-[--gray-medium] mb-4 leading-relaxed">
+                    Después de nueve intentos, ya no es necesario inventar una telenovela de drama para poder divorciarse.
+                  </p>
+                  <div className="flex items-center gap-2 text-[#390050] font-semibold text-sm uppercase tracking-wider">
+                    Leer más
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </article>
+            </Link>
 
-            <article className="group">
-              <div className="mb-6 overflow-hidden">
-                <div className="aspect-video bg-linear-to-br from-[--accent]/20 to-[--accent]/5 flex items-center justify-center transition-transform duration-500 group-hover:scale-105">
+            <Link href="/leyes-coronadas" className="group">
+              <article className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="aspect-video bg-linear-to-br from-[#390050]/20 to-[#00ff88]/10 flex items-center justify-center">
                   <span className="text-6xl">👶</span>
                 </div>
-              </div>
-              <h3 className="font-serif text-2xl font-bold mb-4 group-hover:text-[--accent] transition-colors">
-                Son niñas, no esposas
-              </h3>
-              <p className="text-[--gray-medium] mb-4 leading-relaxed">
-                Después de 17 años de intentos, el Congreso por fin prohibió el matrimonio infantil en Colombia. 
-                Un paso histórico para proteger a nuestros niños y niñas.
-              </p>
-              <a href="/leyes-coronadas" className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-[--foreground] hover:text-[--accent] transition-colors">
-                Leer más
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </article>
+                <div className="p-6">
+                  <h3 className="font-serif text-2xl font-bold mb-3 group-hover:text-[#390050] transition-colors">
+                    Son niñas, no esposas
+                  </h3>
+                  <p className="text-[--gray-medium] mb-4 leading-relaxed">
+                    Después de 17 años de intentos, el Congreso por fin prohibió el matrimonio infantil en Colombia.
+                  </p>
+                  <div className="flex items-center gap-2 text-[#390050] font-semibold text-sm uppercase tracking-wider">
+                    Leer más
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </article>
+            </Link>
           </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 px-6 bg-[--foreground] text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-subtitle font-bold mb-6">
-            Mantente informado
-          </h2>
-          <p className="text-xl text-white/80 mb-8 leading-relaxed">
-            Las leyes nos afectan a todos. Conoce lo que está pasando en el Congreso 
-            de una manera clara, visual y sin complicaciones.
-          </p>
-          <a 
-            href="/leyes-coronadas" 
-            className="inline-block px-8 py-4 bg-[--accent] text-[--foreground] font-semibold uppercase tracking-wider hover:bg-[--accent]/90 transition-colors"
-          >
-            Explorar leyes
-          </a>
         </div>
       </section>
 

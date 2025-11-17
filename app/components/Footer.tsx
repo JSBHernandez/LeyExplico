@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a1a1a] text-white py-16 px-6 border-t-4 border-[--accent]">
+    <footer className="bg-[#1a1a1a] text-white py-10 px-6 border-t-4 border-[--accent]">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-3">
               <Image 
                 src="/materials/SAPO 2.png" 
                 alt="Sapo Logo" 
@@ -17,26 +17,26 @@ export default function Footer() {
               />
               <h3 className="font-serif text-2xl font-bold text-white">Ley Explico</h3>
             </div>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 leading-relaxed text-sm">
               Un proyecto de grado dedicado a explicar las leyes y proyectos del Congreso de Colombia de manera accesible y visual.
             </p>
           </div>
           
-          <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Navegación</h4>
-            <ul className="space-y-3">
+          <div className="md:text-center">
+            <h4 className="font-semibold text-lg mb-3 text-white">Navegación</h4>
+            <ul className="space-y-2">
               <li>
-                <Link href="/leyes-coronadas" className="text-gray-300 hover:text-[--accent] transition-colors flex items-center gap-2">
+                <Link href="/leyes-coronadas" className="text-gray-300 hover:text-[--accent] transition-colors inline-flex items-center gap-2 text-sm">
                   <span>→</span> Leyes Coronadas
                 </Link>
               </li>
               <li>
-                <Link href="/proyectos-saltando" className="text-gray-300 hover:text-[--accent] transition-colors flex items-center gap-2">
+                <Link href="/proyectos-saltando" className="text-gray-300 hover:text-[--accent] transition-colors inline-flex items-center gap-2 text-sm">
                   <span>→</span> Proyectos Saltando
                 </Link>
               </li>
               <li>
-                <Link href="/entre-al-reinado" className="text-gray-300 hover:text-[--accent] transition-colors flex items-center gap-2">
+                <Link href="/entre-al-reinado" className="text-gray-300 hover:text-[--accent] transition-colors inline-flex items-center gap-2 text-sm">
                   <span>→</span> Entre al Reinado
                 </Link>
               </li>
@@ -44,8 +44,8 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="font-semibold text-lg mb-4 text-white">Síguenos</h4>
-            <div className="flex gap-4 mb-6">
+            <h4 className="font-semibold text-lg mb-3 text-white">Síguenos</h4>
+            <div className="flex gap-4 mb-4 flex-wrap">
               <a 
                 href="https://instagram.com" 
                 target="_blank" 
@@ -101,12 +101,15 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-white/10 text-center">
-          <p className="text-gray-400 text-sm">
+        <div className="pt-6 border-t border-white/10">
+          <p className="text-gray-400 text-sm text-center mb-2">
             Diseñado con <span className="text-[--accent]">❤️</span> para hacer las leyes más accesibles
           </p>
-          <p className="text-gray-500 text-xs mt-2">
+          <p className="text-gray-500 text-xs text-center mb-3">
             Proyecto de Grado - Universidad de Colombia
+          </p>
+          <p className="text-gray-500 text-xs text-center leading-relaxed">
+            Las imágenes utilizadas no son de nuestra autoría. Los créditos van para sus respectivos autores y/o publicadores.
           </p>
         </div>
       </div>
