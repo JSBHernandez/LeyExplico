@@ -17,6 +17,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Ley Explico - Proyecto de Grado",
   description: "Revista digital sobre leyes y proyectos del Congreso de Colombia",
+  icons: {
+    icon: "/materials/SAPO 2.png",
+    shortcut: "/materials/SAPO 2.png",
+    apple: "/materials/SAPO 2.png",
+  },
 };
 
 export default function RootLayout({
