@@ -10,7 +10,7 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 text-center">
           {/* Main Logo and Title */}
           <div className="mb-16 animate-fade-in relative">
-            <div className="flex justify-center mb-[-20px] relative z-10">
+            <div className="flex justify-center -mb-5 relative z-10">
               <Image 
                 src="/materials/SAPO 2.png" 
                 alt="Sapo Logo" 

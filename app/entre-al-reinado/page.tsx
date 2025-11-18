@@ -29,7 +29,7 @@ export default function EntreAlReinado() {
                   ENTRE AL REINADO
                 </h1>
                 <p className="text-[#666] text-sm leading-relaxed">
-                  Conoce al equipo detrás de Ley Explico, un proyecto de grado dedicado a hacer las leyes más accesibles para todos los colombianos.
+                  Conoce quien está detrás de Ley Explico, el reino de la explicación de proyectos y leyes de Colombia.
                 </p>
               </div>
             </aside>
@@ -37,18 +37,93 @@ export default function EntreAlReinado() {
             {/* Main Content */}
             <main className="space-y-12">
               
-              {/* Nuestra Misión */}
+              {/* ¿Qué carajos es Ley Explico? */}
               <section className="bg-white shadow-md rounded-lg p-8">
                 <h2 className="font-serif text-3xl font-bold text-[#1a1a1a] mb-6 uppercase">
-                  Nuestra Misión
+                  ¿Qué carajos es Ley Explico?
                 </h2>
-                <div className="space-y-4">
-                  <p className="text-[#333] text-base leading-relaxed">
-                    Ley Explico nace con el propósito de transformar la información legislativa en contenido comprensible y atractivo para todos. Creemos que conocer las leyes que nos rigen es un derecho y una necesidad para construir una sociedad más informada y participativa.
+                <p className="text-[#333] text-base leading-relaxed mb-4">
+                  Somos un medio nativo digital que nacimos postpandemia tras las dificultades para acceder a la información en el Congreso.
+                </p>
+                <p className="text-[#333] text-base leading-relaxed">
+                  Este proyecto busca suplir dos necesidades: hablarles a los ciudadanos con un lenguaje común sobre las leyes que le hacen más fácil, o más difícil, sus vidas; y ofrecerles a los periodistas, y demás chismosos, el material de los proyectos y las iniciativas que transitan y se aprueban en el legislativo.
+                </p>
+              </section>
+
+              {/* ¿Cómo queremos incidir? */}
+              <section className="bg-white shadow-md rounded-lg p-8">
+                <h2 className="font-serif text-3xl font-bold text-[#1a1a1a] mb-6 uppercase">
+                  ¿Cómo queremos incidir?
+                </h2>
+                <p className="text-[#333] text-base leading-relaxed mb-4">
+                  Alfabetizar a los colombianos sobre el maravilloso reino de las leyes. Que no coman cuento, o que sí se van a tragar el sapo, sepan a qué sabe.
+                </p>
+                <p className="text-[#333] text-base leading-relaxed mb-4">
+                  Si los ciudadanos conocen y entienden las normas podrán tomar mejores decisiones.
+                </p>
+                <p className="text-[#333] text-base leading-relaxed">
+                  Hacerle la vida más fácil a los periodistas que cubren en el Congreso y por qué no a los jefes de prensa del legislativo.
+                </p>
+              </section>
+
+              {/* Tomémonos un tinto */}
+              <section className="bg-white shadow-md rounded-lg p-8">
+                <h2 className="font-serif text-3xl font-bold text-[#1a1a1a] mb-6 uppercase">
+                  Tomémonos un tinto, seamos amigos
+                </h2>
+                <p className="text-[#333] text-base leading-relaxed mb-4">
+                  Venga que sí es pa&apos; eso. Necesitamos de su ayuda para mantenernos y seguir creciendo.
+                </p>
+                <p className="text-[#333] text-base leading-relaxed mb-4">
+                  Primero que todo, suscríbase gratis a nuestra newsletter aquí.
+                </p>
+                <p className="text-[#333] text-base leading-relaxed mb-6">
+                  Recibimos donaciones, pautas publicitarias, trabajo patrocinado, realizamos talleres y eventos. Si está interesado, conversemos en <a href="mailto:leyexplico@gmail.com" className="text-[#c77dff] hover:underline font-semibold">leyexplico@gmail.com</a>.
+                </p>
+                
+                {/* Aliados */}
+                <div className="mt-8 pt-6 border-t border-gray-200">
+                  <p className="text-[#333] text-base font-semibold mb-6">
+                    Estos son algunos de nuestros aliados:
                   </p>
-                  <p className="text-[#333] text-base leading-relaxed">
-                    A través de un lenguaje claro, visuales atractivos y un formato de revista digital, buscamos cerrar la brecha entre el Congreso y la ciudadanía, haciendo que la política legislativa sea accesible para reinas y príncipes de todas las edades.
-                  </p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+                    <div className="flex items-center justify-center p-4 bg-[#f5f5f5] rounded-lg">
+                      <Image 
+                        src="/materials/partner1.png" 
+                        alt="Aliado 1" 
+                        width={120} 
+                        height={60}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center p-4 bg-[#f5f5f5] rounded-lg">
+                      <Image 
+                        src="/materials/partner2.png" 
+                        alt="Aliado 2" 
+                        width={120} 
+                        height={60}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center p-4 bg-[#f5f5f5] rounded-lg">
+                      <Image 
+                        src="/materials/partner3.jpg" 
+                        alt="Aliado 3" 
+                        width={120} 
+                        height={60}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center p-4 bg-[#f5f5f5] rounded-lg">
+                      <Image 
+                        src="/materials/partner4.png" 
+                        alt="Aliado 4" 
+                        width={120} 
+                        height={60}
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
                 </div>
               </section>
 
