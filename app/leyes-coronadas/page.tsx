@@ -113,10 +113,10 @@ export default function LeyesCoronadas() {
       <section className="py-16 px-6 bg-white border-t border-gray-200">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="font-serif text-3xl font-bold mb-4 text-[#1a1a1a]">
-            Mantente informado
+            NO COMA CUENTO
           </h2>
           <p className="text-[#666] text-lg mb-8">
-            Las leyes nos afectan a todos. Conoce lo que está pasando en el Congreso de una manera clara, visual y profesional.
+            Conocer las leyes es bueno, entenderlas aún mejor.
           </p>
           <Link 
             href="/"

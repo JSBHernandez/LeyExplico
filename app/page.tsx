@@ -7,20 +7,20 @@ export default function Home() {
     <>
       {/* Hero Section with Purple Background */}
       <section className="min-h-screen bg-[#390050] relative flex items-center justify-center">
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-10 text-center">
           {/* Main Logo and Title */}
-          <div className="mb-16 animate-fade-in">
-            <div className="flex justify-center mb-8">
+          <div className="mb-16 animate-fade-in relative">
+            <div className="flex justify-center mb-[-20px] relative z-10">
               <Image 
                 src="/materials/SAPO 2.png" 
                 alt="Sapo Logo" 
-                width={120} 
-                height={120}
-                className="object-contain drop-shadow-2xl animate-bounce-slow"
+                width={144} 
+                height={144}
+                className="object-contain"
                 priority
               />
             </div>
-            <h1 className="font-serif text-[clamp(3rem,12vw,8rem)] font-bold text-white mb-6 tracking-tight leading-none drop-shadow-lg">
+            <h1 className="ley-explico-title text-[clamp(3rem,12vw,8rem)] font-bold text-white mb-6 tracking-tight leading-none drop-shadow-lg">
               LEY EXPLICO
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light tracking-wide">
@@ -37,7 +37,7 @@ export default function Home() {
                   LEYES CORONADAS
                 </h2>
                 <p className="text-white/80 text-sm md:text-base leading-relaxed">
-                  Descubre las leyes aprobadas que están transformando Colombia
+                  Entienda las leyes para que no coma cuento
                 </p>
                 <div className="mt-6 flex justify-center items-center gap-2 text-[#00ff88] font-semibold uppercase text-sm tracking-wider">
                   Explorar
@@ -55,7 +55,7 @@ export default function Home() {
                   PROYECTOS SALTANDO
                 </h2>
                 <p className="text-white/80 text-sm md:text-base leading-relaxed">
-                  Conoce los proyectos de ley en proceso que marcarán el futuro
+                  Conozca los proyectos que le pueden dar un salto a su vida
                 </p>
                 <div className="mt-6 flex justify-center items-center gap-2 text-[#00ff88] font-semibold uppercase text-sm tracking-wider">
                   Explorar
@@ -73,7 +73,7 @@ export default function Home() {
                   ENTRE AL REINADO
                 </h2>
                 <p className="text-white/80 text-sm md:text-base leading-relaxed">
-                  Conoce al equipo y únete a nuestra comunidad informada
+                  Sea una reina o un príncipe y ayúdenos a seguir conquistando
                 </p>
                 <div className="mt-6 flex justify-center items-center gap-2 text-[#00ff88] font-semibold uppercase text-sm tracking-wider">
                   Explorar
@@ -104,7 +104,7 @@ export default function Home() {
       {/* Featured Content Section */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-serif text-subtitle font-bold mb-4 text-center text-[#390050]">
+          <h2 className="font-serif text-subtitle font-bold mb-10 text-center text-[#390050]">
             Últimas Leyes Aprobadas
           </h2>
           <p className="text-center text-[--gray-medium] mb-12 max-w-2xl mx-auto">
