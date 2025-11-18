@@ -291,6 +291,33 @@ export default function SonNinasNoEsposas() {
               </div>
             </div>
 
+            {/* PDF Document */}
+            <div className="bg-white/10 rounded-lg overflow-hidden backdrop-blur-sm mt-6">
+              <div className="p-4">
+                <div className="flex items-start gap-4">
+                  <div className="shrink-0">
+                    <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20M10,19L12,15H9V10H15V15L13,19H10Z" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-sm text-white/80 mb-2 font-semibold">Documento PDF</p>
+                    <p className="text-xs text-white/70 mb-3">Comunicado de prensa último debate matrimonio infantil</p>
+                    <a 
+                      href="/materials/comunicado de prensa ultimo debate matrimonio infantil .pdf" 
+                      download
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-white text-[#390050] font-semibold rounded-lg hover:bg-white/90 transition-colors text-sm"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                      Descargar PDF
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Notas adicionales */}
             <div className="mt-6 pt-6 border-t border-white/20">
               <p className="text-white/70 text-sm leading-relaxed">

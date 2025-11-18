@@ -24,7 +24,7 @@ export default function Home() {
               LEY EXPLICO
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-light tracking-wide">
-              Reinas y príncipes, bienvenidos a la revista digital que explica las leyes del Congreso de Colombia
+              Reinas y príncipes, bienvenidos al Reino de la explicación de proyectos y leyes de Colombia. 
             </p>
           </div>
 

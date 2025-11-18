@@ -60,19 +60,24 @@ export default function EntreAlReinado() {
                 <div className="max-w-md mx-auto">
                   {/* Autora */}
                   <div className="bg-[#f5f5f5] p-8 rounded-lg text-center">
-                    <div className="w-32 h-32 rounded-full bg-[#c77dff]/20 flex items-center justify-center text-5xl mb-6 mx-auto overflow-hidden">
-                      {/* Placeholder - Reemplazar con imagen real */}
-                      👑
+                    <div className="w-32 h-32 rounded-full mb-6 mx-auto overflow-hidden">
+                      <Image 
+                        src="/fotocynthia.jpeg" 
+                        alt="Cynthia Pineda" 
+                        width={128} 
+                        height={128}
+                        className="object-cover w-full h-full"
+                      />
                     </div>
-                    <h3 className="font-serif text-2xl font-bold mb-3 text-[#1a1a1a]">[Nombre de la autora]</h3>
+                    <h3 className="font-serif text-2xl font-bold mb-3 text-[#1a1a1a]">Cynthia Pineda</h3>
                     <p className="text-[#c77dff] text-sm uppercase tracking-wider mb-4 font-semibold">
-                      Creadora del proyecto
+                      Creadora de Ley Explico
                     </p>
                     <p className="text-[#666] text-base leading-relaxed mb-4">
-                      [Programa académico / Universidad]
+                      Maestría en Comunicación Digital de la Universidad de La Sabana.
                     </p>
                     <p className="text-[#666] text-sm leading-relaxed">
-                      Descripción breve sobre la autora, su motivación para crear Ley Explico y su visión sobre hacer las leyes más accesibles para todos los colombianos.
+                      Comunicadora Social, especialista en Marketing Político. Este proyecto nació como trabajo de grado para la Maestría en Comunicación Digital de la Universidad de La Sabana.
                     </p>
                   </div>
                 </div>
@@ -90,7 +95,7 @@ export default function EntreAlReinado() {
                 <div className="flex justify-center gap-8 flex-wrap">
                   {/* Instagram */}
                   <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/leyexplico?igsh=MXNkbzV1eWhzYmJsZg==" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group text-center"
@@ -107,7 +112,7 @@ export default function EntreAlReinado() {
 
                   {/* X (Twitter) */}
                   <a 
-                    href="https://twitter.com" 
+                    href="https://x.com/cynthiapinedah?s=21" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group text-center"
@@ -141,7 +146,7 @@ export default function EntreAlReinado() {
 
                   {/* TikTok */}
                   <a 
-                    href="https://tiktok.com" 
+                    href="https://www.tiktok.com/@tiesaymaja" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="group text-center"
@@ -160,9 +165,9 @@ export default function EntreAlReinado() {
 
               {/* Información Académica */}
               <section className="bg-white shadow-md rounded-lg p-8 text-center">
-                <h3 className="font-serif text-2xl font-bold mb-4 text-[#1a1a1a]">Proyecto de Grado</h3>
+                <h3 className="font-serif text-2xl font-bold mb-4 text-[#1a1a1a]">Trabajo de Grado</h3>
                 <p className="text-[#666] mb-2 text-base">
-                  Universidad de Colombia / Facultad / Programa
+                  Universidad de La Sabana / Maestría en Comunicación Digital
                 </p>
                 <p className="text-sm text-[#666]">
                   Año 2025
